@@ -1,10 +1,11 @@
 <script lang="ts">
+    import { base } from "$app/paths";
     import Navbar from "../components/Navbar.svelte";
 </script>
 
 <Navbar title="portfolio">
-    <li><a href="/">Home</a></li>
-    <li><a href="/about">About</a></li>
+    <li><a href="{base}/">Home</a></li>
+    <li><a href="{base}/about">About</a></li>
 </Navbar>
 <main>
     <slot />

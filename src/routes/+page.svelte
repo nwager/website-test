@@ -1,4 +1,5 @@
 <script lang="ts">
+    import { base } from "$app/paths";
     import Column from "../components/Column.svelte";
     import ColumnContainer from "../components/ColumnContainer.svelte";
     import GraphicNav from "../components/GraphicNav.svelte";
@@ -7,10 +8,10 @@
     import TitleCard from "../components/TitleCard.svelte";
 </script>
 
-<TitleCard title="home page" subtitle="home subtitle" imgSrc="/images/butters.jpeg" />
+<TitleCard title="home page" subtitle="home subtitle" imgSrc="{base}/images/butters.jpeg" />
 
 <ImageBlock title="Body 1">
-    <img src="/images/butters.jpeg" class="left">
+    <img src="{base}/images/butters.jpeg" class="left" alt="Butters in body text">
     <p>Some body paragraph text.</p>
     <p>
         Paragraph break to demonstrate block-ness. If that's the correct term.
@@ -40,7 +41,7 @@
 <ColumnContainer>
     <Column>
         <ImageBlock>
-            <img src="/images/butters.jpeg" class="left">
+            <img src="{base}/images/butters.jpeg" class="left" alt="Butters to the left">
             <p>Block of text in a column.</p>
         </ImageBlock>
     </Column>
@@ -49,7 +50,7 @@
         <GraphicNav>
             <GraphicNavItem><p>One</p></GraphicNavItem>
             <GraphicNavItem><p>Two</p></GraphicNavItem>
-            <GraphicNavItem><img src="/images/butters.jpeg"></GraphicNavItem>
+            <GraphicNavItem><img src="{base}/images/butters.jpeg" alt="Butters in a circle"></GraphicNavItem>
             <GraphicNavItem><p>Four</p></GraphicNavItem>
             <GraphicNavItem><p>Five</p></GraphicNavItem>
         </GraphicNav>
