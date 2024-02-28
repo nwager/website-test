@@ -21,7 +21,7 @@
         display: flex;
         flex-direction: row;
         padding: 10% 6%;
-        margin: 2em 0;
+        margin-bottom: 2em;
         border: 1px solid red;
     }
 

@@ -1,11 +1,13 @@
 <script lang="ts">
-    export let title: string = "navbar";
+    import { base } from "$app/paths";
+
+    export let title: string;
 </script>
 
-<div class="navbar-container">
+<div id="navbar-container">
     <div class="navbar">
         <div class="inner">
-            <span>{title}</span>
+            <a href="{base}/"><span>{title}</span></a>
             <ul>
                 <slot />
             </ul>
@@ -14,16 +16,16 @@
 </div>
 
 <style lang="scss">
-    $navbar-height: 2.2em;
+    $navbar-height: 4rem;
 
-    .navbar-container {
+    #navbar-container {
         width: 100%;
         height: $navbar-height;
         
         .navbar {
             position: fixed;
             top: 0;
-            width: inherit;
+            width: 100%;
             height: $navbar-height;
             font-size: 1.3em;
             background-color: coral;
@@ -34,18 +36,17 @@
                 display: flex;
                 flex-direction: row;
                 align-items: center;
-                
             }
         }
     }
 
     ul {
+        height: 100%;
         list-style-type: none;
         padding: 0;
         margin: 0;
         margin-left: auto;
         display: flex;
         flex-direction: row;
-        gap: 1em;
     }
 </style>

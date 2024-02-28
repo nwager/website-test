@@ -7,11 +7,10 @@
         list-style-type: none;
         margin: 0;
         padding: 0;
-        width: 80%;
 
         // stolen from https://css-tricks.com/an-auto-filling-css-grid-with-max-columns/
         --grid-layout-gap: 2em;
-        --grid-max-columns: 3;
+        --grid-max-columns: 2;
         --grid-item--min-width: 10em;
 
         --gap-count: calc(var(--grid-max-columns) - 1);
@@ -21,5 +20,7 @@
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(max(var(--grid-item--min-width), var(--grid-item--max-width)), 1fr));
         grid-gap: var(--grid-layout-gap);
+        justify-items: center;
+        align-items: center;
     }
 </style>

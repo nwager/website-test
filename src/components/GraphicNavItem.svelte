@@ -6,6 +6,8 @@
     .graphic-nav-item {
         background-color: red;
         width: 100%;
+        height: 100%;
+        max-width: 12em;
         overflow: hidden;
         display: flex;
         align-items: center;

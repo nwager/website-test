@@ -14,7 +14,10 @@ const config = {
 		adapter: adapter(),
         paths: {
             base: process.env.NODE_ENV === 'production' ? '/website-test' : '',
-        }
+        },
+		alias: {
+			'components': './src/components'
+		}
 	}
 };
 
